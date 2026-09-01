@@ -1,0 +1,101 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  margin: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-expanded {
+  align-items: flex-start;
+  margin-right: 16px; 
+
+  #sidebar-toggle-home-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px;
+  }
+}
+
+
+
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  margin: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #d7a122; /* Darker shade for hover effect */
+    border-radius: 8px; /* Optional: add some rounding to the corners */
+  }
+}
+
+.sidebar-logo {
+  position: relative;
+  min-width: 48px;
+  width: auto;  
+  height: 5vh;
+  margin: 4px;
+  display: flex;
+  border: none; 
+  background: none;
+
+  .collapse-icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .app-icon,
+  .hover-icon {
+    /* Beide Icons belegen denselben Platz im Grid */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .hover-icon {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9); /* optional: minimaler Zoom-Effekt */
+  }
+
+  .app-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &:hover {
+    .app-icon {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.9);
+    }
+
+    .hover-icon {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+  }
+}

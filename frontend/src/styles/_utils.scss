@@ -1,0 +1,79 @@
+@use 'variables' as *;
+
+// flex
+
+.flex-dflex {
+    display: flex;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-align-start {
+    align-items: flex-start;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+
+// colors
+
+.clr-1 {
+    color: $primary-color;
+}
+
+.clr-2 {
+    color: $secondary-color;
+}
+
+// gaps
+
+.g-16 {
+    gap: 16px;
+}
+
+// heights
+
+@for $i from 1 through 20 {
+  $val: $i * 5;
+
+  .h-#{$val}p {
+    height: #{$val * 1%};
+  }
+}
+
+@for $i from 1 through 20 {
+  $val: $i * 5;
+
+  .h-#{$val}vh {
+    height: #{$val * 1vh};
+  }
+}
+
+
+// widths
+
+@for $i from 1 through 10 {
+  $val: $i * 10;
+
+  .w-#{$val}p {
+    width: #{$val * 1%};
+  }
+}
+
+@for $i from 1 through 10 {
+  $val: $i * 10;
+
+  .w-#{$val}vw {
+    width: #{$val * 1vw};
+  }
+}
+
+// margins 
+
+.mr-lg {
+    margin-right: 32px;
+}

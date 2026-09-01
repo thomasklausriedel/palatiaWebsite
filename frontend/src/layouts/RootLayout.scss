@@ -1,0 +1,17 @@
+.sidebar-container {
+    margin-right: 32px;
+    border-right: 1px solid #c38a08;
+    padding: 8px;
+    background-color: $secondary-color;
+}
+
+
+.expanded {
+    width: 10vw;
+    transition: width 0.3s ease;
+}
+
+.collapsed {
+    width: 3vw;
+    transition: width 0.3s ease;
+}
