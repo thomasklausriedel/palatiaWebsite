@@ -12,11 +12,11 @@ export const RootLayout = () => {
             <div className={`sidebar-container ${sidebarExpanded ? 'expanded' : 'collapsed'}`}>
                 <Sidebar sidebarExpanded={sidebarExpanded} setSidebarExpanded={setSidebarExpanded} />
             </div>
-            <div>
-                <div className="h-10vh">
+            <div className="w-100vw">
+                <div className="header-container">
                     <Header sidebarExpanded={sidebarExpanded} setSidebarExpanded={setSidebarExpanded} />
                 </div>
-                <div className="h-80vh">
+                <div className="main-content">
                     <Outlet />
                 </div>
                 

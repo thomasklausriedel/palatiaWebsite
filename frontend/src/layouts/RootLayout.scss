@@ -1,16 +1,7 @@
-// .sidebar-container {
-//     margin-right: 2rem;
-//     border-right: 1px solid #c38a08;
-//     padding: min(0.5em, 10%);
-//     background-color: $secondary-color;
-// }
-
-
-.expanded {
-    width: 90vw;
-    transition: width 0.3s ease;
-}
-
-.collapsed {
-    display: none;
+.header-container {
+    position: sticky;
+    top: 0;
+    z-index: 950;
+    background-color: $primary-color;
+    color: white;
 }

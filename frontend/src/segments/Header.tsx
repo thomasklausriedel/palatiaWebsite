@@ -11,10 +11,14 @@ export const Header = ({ sidebarExpanded, setSidebarExpanded }: HeaderProps) => 
         <header className="header">
             <div className="header-content">
                 <div onClick={() => setSidebarExpanded(!sidebarExpanded)}>
-                    {!sidebarExpanded && <Menu
+                    {!sidebarExpanded && <Menu size={48}
                      className="menu-btn" />}
                 </div>
-                <span className="header-title">W.K.St.V. Unitas Palatia Darmstadt</span>
+                <div className="header-title">
+                    <span>
+                        W.K.St.V. Unitas Palatia Darmstadt
+                    </span>
+                </div>
             </div>
         </header>
     );

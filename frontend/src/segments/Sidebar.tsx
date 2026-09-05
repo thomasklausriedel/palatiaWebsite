@@ -1,6 +1,5 @@
-import { ChevronRight, Info, Phone, ShoppingCart, ChevronLeft, MapPin } from "lucide-react";
+import { Info, Phone, ShoppingCart, ChevronLeft, MapPin } from "lucide-react";
 import "./Sidebar.scss";
-import { Tooltip } from "../components/Tooltip";
 import { Logo } from "../components/Logo";
 
 interface SidebarProps {
@@ -11,7 +10,7 @@ interface SidebarProps {
 export const Sidebar = ({ sidebarExpanded, setSidebarExpanded }: SidebarProps) => {
     return (
         <div>
-            <div className={`sidebar g-16 ${sidebarExpanded ? 'sidebar-expanded' : 'sidebar-collapsed'}`}>
+            <div className={`sidebar g-16 ${sidebarExpanded ? 'sidebar-expanded is-open' : 'sidebar-collapsed'}`}>
 
                 <div id="sidebar-toggle-home-section">
                     {sidebarExpanded && (
@@ -20,13 +19,8 @@ export const Sidebar = ({ sidebarExpanded, setSidebarExpanded }: SidebarProps) =
                         </a>
                     )}
                     <button className="sidebar-logo" onClick={() => setSidebarExpanded(!sidebarExpanded)}>
-                        {sidebarExpanded ? (
+                        {sidebarExpanded && (
                             <ChevronLeft size={32} className="collapse-icon clr-1" />
-                        ) : (
-                            <Tooltip text="Expand Sidebar">
-                                <Logo className="app-icon" />
-                                <ChevronRight size={32} className="hover-icon clr-1" />
-                            </Tooltip>
                         )}
                     </button>
 
