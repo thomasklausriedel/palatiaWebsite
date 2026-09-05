@@ -14,7 +14,7 @@ export const RootLayout = () => {
             </div>
             <div>
                 <div className="h-10vh">
-                    <Header/>
+                    <Header sidebarExpanded={sidebarExpanded} setSidebarExpanded={setSidebarExpanded} />
                 </div>
                 <div className="h-80vh">
                     <Outlet />
