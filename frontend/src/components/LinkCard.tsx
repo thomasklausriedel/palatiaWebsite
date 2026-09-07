@@ -9,11 +9,12 @@ interface LinkCardProps {
 
 export const LinkCard = ({ title, link, icon: Icon }: LinkCardProps) => {
     return (
-        <div className="link-card">
-            <a href={link}>
-                <Icon className="link-card-icon" size={24} />
-                {title}
+            <a href={link} className="link-card">
+                <div className="link-card-content">
+                    <Icon className="link-card-icon" size={48} />
+                    {title}
+                </div>
             </a>
-        </div>
+        
     )
 }

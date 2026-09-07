@@ -15,9 +15,7 @@ export const Header = ({ sidebarExpanded, setSidebarExpanded }: HeaderProps) => 
                      className="menu-btn" />}
                 </div>
                 <div className="header-title">
-                    <span>
                         W.K.St.V. Unitas Palatia Darmstadt
-                    </span>
                 </div>
             </div>
         </header>

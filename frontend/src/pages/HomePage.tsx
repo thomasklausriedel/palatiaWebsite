@@ -1,5 +1,6 @@
 import { Home, Info, MapPin, Phone, ShoppingBag } from "lucide-react"
 import { LinkCard } from "../components/linkCard"
+import "./HomePage.scss"
 
 export const HomePage = () => {
     return (
