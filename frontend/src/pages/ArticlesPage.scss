@@ -1,0 +1,13 @@
+.article-content {
+  /* default layout for article content */
+  &.collapsed {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &.expanded {
+    display: block;
+  }
+}

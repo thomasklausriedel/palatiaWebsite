@@ -4,7 +4,7 @@ import { HomePage } from "../pages/HomePage";
 import { NotFoundPage } from "../pages/NotFoundPage";
 import { AboutPage } from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
-import { ProductsPage } from "../pages/ProductsPage";
+import { ArticlesPage } from "../pages/ArticlesPage";
 import { DirectionsPage } from "../pages/DirectionsPage";
 
 export const router = createBrowserRouter([
@@ -26,9 +26,9 @@ export const router = createBrowserRouter([
         element: <ContactPage />,
       },
       {
-        path: "products", // Route für "/products"
-        element: <ProductsPage />,
-      }, 
+        path: "articles", // Route für "/articles"
+        element: <ArticlesPage />,
+      },
       {
         path: "directions", // Route für "/directions"
         element: <DirectionsPage />,
