@@ -11,7 +11,7 @@ export const LinkCard = ({ title, link, icon: Icon }: LinkCardProps) => {
     return (
             <a href={link} className="link-card">
                 <div className="link-card-content">
-                    <Icon className="link-card-icon" size={32} />
+                    <Icon className="link-card-icon" size={18} />
                     {title}
                 </div>
             </a>

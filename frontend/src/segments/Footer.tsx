@@ -8,7 +8,7 @@ export const Footer = () => {
             <div className="footer-content">
                 <div></div>
                 <div className="link-section">
-                    <LinkCard link="#" title="Home" icon={Home}/>
+                    <LinkCard link="/" title="Home" icon={Home}/>
                     <LinkCard link="/about" title="About" icon={Info}/>
                     <LinkCard link="/contact" title="Contact" icon={Phone}/>
                     <LinkCard link="/articles" title="FUZ-Artikel" icon={ScrollText}/>

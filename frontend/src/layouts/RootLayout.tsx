@@ -9,18 +9,18 @@ export const RootLayout = () => {
     const [sidebarExpanded, setSidebarExpanded] = useState(false);
 
     return (
-        <div className="flex-dflex">
+        <div className="root-layout flex-dflex">
             <div className={`sidebar-container ${sidebarExpanded ? 'expanded' : 'collapsed'}`}>
                 <Sidebar sidebarExpanded={sidebarExpanded} setSidebarExpanded={setSidebarExpanded} />
             </div>
-            <div className="w-100vw">
+            <div className="content-container">
                 <div className="header-container">
                     <Header sidebarExpanded={sidebarExpanded} setSidebarExpanded={setSidebarExpanded} />
                 </div>
                 <div className="main-content">
                     <Outlet />
                 </div>
-                <div className="footer">
+                <div className="footer-container">
                     <Footer />
                 </div>
             </div>
