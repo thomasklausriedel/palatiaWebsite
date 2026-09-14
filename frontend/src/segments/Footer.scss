@@ -1,0 +1,13 @@
+.footer-content {
+    background-color: $secondary-color;
+    
+}
+
+.link-section {
+    display: flex; 
+    flex-direction: row; 
+    padding: 1rem;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
