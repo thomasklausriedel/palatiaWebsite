@@ -1,7 +1,34 @@
+.root-layout {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
 .header-container {
     position: sticky;
     top: 0;
     z-index: 950;
+    height: 10vh;
+    flex-shrink: 0;
     background-color: $primary-color;
     color: white;
+}
+
+.main-content {
+    flex: 1;
+    min-height: 0;
+    background-color: $background-color;
+}
+
+.footer-container {
+    z-index: 950;
+    flex-shrink: 0;
 }
