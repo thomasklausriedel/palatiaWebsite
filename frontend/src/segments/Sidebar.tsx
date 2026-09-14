@@ -1,6 +1,8 @@
-import { Info, Phone, ShoppingCart, ChevronLeft, MapPin } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
+import { Link, useMatches } from "react-router-dom";
 import "./Sidebar.scss";
 import { Logo } from "../components/Logo";
+import { getNavigationItems } from "../router/navigation";
 
 interface SidebarProps {
     sidebarExpanded: boolean;
@@ -8,6 +10,9 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({ sidebarExpanded, setSidebarExpanded }: SidebarProps) => {
+    const rootMatch = useMatches().find((match) => match.id === "root");
+    const navigationItems = getNavigationItems(rootMatch?.handle);
+
     return (
         <div>
             <div className={`sidebar g-16 ${sidebarExpanded ? 'sidebar-expanded is-open' : 'sidebar-collapsed'}`}>
@@ -26,22 +31,14 @@ export const Sidebar = ({ sidebarExpanded, setSidebarExpanded }: SidebarProps) =
 
                 </div>
 
-                <a className="sidebar-link" href="/about">
-                    <Info size={32} className="clr-1" />
-                    {sidebarExpanded && <span className="sidebar-link-text">About</span>}
-                </a>
-                <a className="sidebar-link" href="/contact">
-                    <Phone size={32} className="clr-1" />
-                    {sidebarExpanded && <span className="sidebar-link-text">Contact</span>}
-                </a>
-                <a className="sidebar-link" href="/products">
-                    <ShoppingCart size={32} className="clr-1" />
-                    {sidebarExpanded && <span className="sidebar-link-text">Products</span>}
-                </a>
-                <a className="sidebar-link" href="/directions">
-                    <MapPin size={32} className="clr-1" />
-                    {sidebarExpanded && <span className="sidebar-link-text">Directions</span>}
-                </a>
+                {navigationItems
+                    .filter(({ link }) => link !== "/")
+                    .map(({ link, title, icon: Icon }) => (
+                        <Link className="sidebar-link" to={link} key={link}>
+                            <Icon size={32} className="clr-1" />
+                            {sidebarExpanded && <span className="sidebar-link-text">{title}</span>}
+                        </Link>
+                    ))}
             </div>
             <div className={`overlay-backdrop ${sidebarExpanded ? 'is-open' : ''}`}></div>
         </div>
