@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .link-card {
     display: flex;
     flex-direction: column;
@@ -14,7 +16,7 @@
     &:hover {
         border-color: black;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: darken($primary-color, 10%);
+        background-color: color.adjust($primary-color, $lightness: -10%);
     }
 
 }
