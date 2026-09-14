@@ -3,6 +3,7 @@ import { Header } from "../segments/Header"
 import { Sidebar } from "../segments/Sidebar"
 import "./RootLayout.scss"
 import { useState } from "react"
+import { Footer } from "../segments/Footer"
 
 export const RootLayout = () => {
     const [sidebarExpanded, setSidebarExpanded] = useState(false);
@@ -19,7 +20,9 @@ export const RootLayout = () => {
                 <div className="main-content">
                     <Outlet />
                 </div>
-                
+                <div className="footer">
+                    <Footer />
+                </div>
             </div>
         </div>
     )
