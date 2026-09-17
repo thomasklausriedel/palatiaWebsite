@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import articles from '../assets/data/articles.json'
-import { PdfViewer } from '../components/PdfViewer'
 import fuzPdf from '../assets/pdf/FUZ_2026.pdf'
 import './ArticlesPage.scss'
 
@@ -10,9 +9,9 @@ interface DateFormatterProps {
 
 export const ArticlesPage = () => {
   const [expanded, setExpanded] = useState<Record<number, boolean>>({})
-  const [showPdf, setShowPdf] = useState(false)
 
   const toggle = (id: number) => setExpanded(prev => ({ ...prev, [id]: !prev[id] }))
+  const openPdf = () => window.open(fuzPdf, '_blank', 'noopener,noreferrer')
 
   return (
     <div className="articles-page">
@@ -22,12 +21,9 @@ export const ArticlesPage = () => {
           <h1>Artikel</h1>
           <p>Entdecke unsere aktuellen Beiträge und die digitale Ausgabe der FUZ.</p>
         </div>
-        <button type="button" className="pdf-toggle" onClick={() => setShowPdf((visible) => !visible)}>
-          {showPdf ? 'PDF ausblenden' : 'FUZ als PDF anzeigen'}
+        <button type="button" className="pdf-toggle" onClick={openPdf}>
+          FUZ als PDF anzeigen
         </button>
-      </div>
-      <div className="pdf-viewer-container">
-        {showPdf && <PdfViewer file={fuzPdf} title="FUZ 2026"/>}
       </div>
       
       <div className="articles-list">
