@@ -1,5 +1,87 @@
+.articles-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 3% 15%;
+}
+
+.articles-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.articles-page-header h1,
+.articles-page-header p {
+  margin: 0;
+}
+
+.articles-page-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.articles-page-eyebrow {
+  margin-bottom: 0.5rem !important;
+  color: $primary-color;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pdf-toggle,
+.article-toggle {
+  border: 0;
+  border-radius: 0.4rem;
+  color: white;
+  background: $primary-color;
+  cursor: pointer;
+  font: inherit;
+}
+
+.pdf-toggle {
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+}
+
+.pdf-toggle:hover,
+.pdf-toggle:focus-visible,
+.article-toggle:hover,
+.article-toggle:focus-visible {
+  background: #00385e;
+}
+
+.articles-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.article-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.article-card h2 {
+  margin-top: 0;
+}
+
+.article-toggle {
+  padding: 0.5rem 0.75rem;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
 .article-content {
-  /* default layout for article content */
   &.collapsed {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -10,5 +92,20 @@
 
   &.expanded {
     display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .articles-page {
+    margin: 2rem 1rem;
+  }
+
+  .articles-page-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pdf-toggle {
+    align-self: flex-start;
   }
 }
