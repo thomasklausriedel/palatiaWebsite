@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react"
 
 export interface GalleryImage {
     src: string
+    thumbnailSrc?: string
     alt: string
 }
 
@@ -75,7 +76,7 @@ export const Gallery = ({ images, title = "Gallery", description }: GalleryProps
                         onClick={() => setSelectedIndex(index)}
                         aria-label={`Open ${image.alt}`}
                     >
-                        <img src={image.src} alt={image.alt} loading="lazy" />
+                        <img src={image.thumbnailSrc ?? image.src} alt={image.alt} loading="lazy" />
                     </button>
                 ))}
             </div>
