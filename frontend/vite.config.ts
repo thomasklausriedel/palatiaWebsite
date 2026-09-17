@@ -6,6 +6,9 @@ import { imagetools } from 'vite-imagetools'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), imagetools()],
+  resolve: {
+    dedupe: ["react", "react-dom"],
+  },
   css: {
     preprocessorOptions: {
       scss: {
