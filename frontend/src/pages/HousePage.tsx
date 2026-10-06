@@ -26,7 +26,7 @@ const housepageImages: GalleryImage[] = Object.entries(housepageImageModules).ma
 export const HousePage = () => {
 	return (
 		<>
-			<Gallery images={housepageImages}/>
+			<Gallery images={housepageImages} title={"Hausrundgang"}/>
 		</>
 	);
 }
