@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, Info, MapPin, Phone, ScrollText } from "lucide-react";
+import { Home, House, Info, MapPin, Phone, ScrollText } from "lucide-react";
 import { RootLayout } from "../layouts/RootLayout";
 import { HomePage } from "../pages/HomePage";
 import { NotFoundPage } from "../pages/NotFoundPage";
-import { AboutPage } from "../pages/AboutPage";
+import { HousePage } from "../pages/HousePage";
 import ContactPage from "../pages/ContactPage";
 import { ArticlesPage } from "../pages/ArticlesPage";
 import { DirectionsPage } from "../pages/DirectionsPage";
@@ -18,10 +18,10 @@ const childRoutes = [
     } satisfies RouteHandle,
   },
   {
-    path: "about",
-    element: <AboutPage />,
+    path: "house",
+    element: <HousePage />,
     handle: {
-      navigation: { title: "About", link: "/about", icon: Info },
+      navigation: { title: "Hausrundgang", link: "/house", icon: House },
     } satisfies RouteHandle,
   },
   {
