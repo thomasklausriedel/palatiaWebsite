@@ -8,7 +8,6 @@
     flex-direction: column;
     flex: 1;
     min-height: 100vh;
-    min-width: 0;
     box-sizing: border-box;
 }
 
@@ -16,7 +15,6 @@
     position: sticky;
     top: 0;
     z-index: 950;
-    height: 10vh;
     flex-shrink: 0;
     background-color: $primary-color;
     color: white;

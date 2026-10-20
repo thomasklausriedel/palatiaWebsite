@@ -1,10 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, House, Info, MapPin, Phone, ScrollText } from "lucide-react";
+import { House, MapPin, ScrollText, UsersRound } from "lucide-react";
 import { RootLayout } from "../layouts/RootLayout";
 import { HomePage } from "../pages/HomePage";
 import { NotFoundPage } from "../pages/NotFoundPage";
 import { HousePage } from "../pages/HousePage";
-import ContactPage from "../pages/ContactPage";
 import { ArticlesPage } from "../pages/ArticlesPage";
 import { DirectionsPage } from "../pages/DirectionsPage";
 import type { RouteHandle } from "./navigation";
@@ -14,21 +13,14 @@ const childRoutes = [
     index: true,
     element: <HomePage />,
     handle: {
-      navigation: { title: "Home", link: "/", icon: Home },
+      navigation: { title: "Wir", link: "/", icon: UsersRound },
     } satisfies RouteHandle,
   },
   {
     path: "house",
     element: <HousePage />,
     handle: {
-      navigation: { title: "Hausrundgang", link: "/house", icon: House },
-    } satisfies RouteHandle,
-  },
-  {
-    path: "contact",
-    element: <ContactPage />,
-    handle: {
-      navigation: { title: "Contact", link: "/contact", icon: Phone },
+      navigation: { title: "Haus", link: "/house", icon: House },
     } satisfies RouteHandle,
   },
   {
