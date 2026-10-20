@@ -53,7 +53,7 @@ export const HomePage = () => {
 
             <Gallery
                 images={homepageImages}
-                title="Gallerie"
+                title="Galerie"
                 description="Wer wir sind..."
             />
         </div>
