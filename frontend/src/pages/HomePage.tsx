@@ -42,11 +42,11 @@ export const HomePage = () => {
             <div className="section-2">
                 <div className="slogans">
                     <h2 className="h2-studium-zuhause">Bei uns bist du richtig!</h2>
-                    <p className="question question-1">Du bist an mehr als nur deinem Studienfach interessiert?</p>
-                    <p className="question question-2">Dir sind Werte und Grundsätze wichtig?</p>
-                    <p className="question question-3">Du benötigst eine bezahlbare Unterkunft für dein Studium?</p>
-                    <p className="question question-4">Du suchst Gemeinschaft, nicht nur für die Dauer des Studiums?</p>
-                    <p className="question question-5">Du willst deinen Glauben leben und im Gespräch mit anderen vertiefen?</p>
+                    <p className="question question-1">Mehr als Fachwissen: Horizonterweiterung durch generationsübergreifenden Austausch.</p>
+                    <p className="question question-2">Haltung zeigen: Ein Wertekompass, der dich durchs ganze Leben trägt.</p>
+                    <p className="question question-3">Wohnen statt Suchen: Dein bezahlbares Zimmer mitten im Studentenleben. </p>
+                    <p className="question question-4">Ein Bund fürs Leben: Echte Freundschaften, die Semester überdauern.</p>
+                    <p className="question question-5">Glaube mit Profil: Diskutieren, reflektieren, gemeinsam feiern.</p>
                 </div>
                 <img src={Wappen} alt="Wappen" className="wappen" />
             </div>
