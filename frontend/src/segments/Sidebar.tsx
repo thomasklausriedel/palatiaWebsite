@@ -40,7 +40,7 @@ export const Sidebar = ({ sidebarExpanded, setSidebarExpanded }: SidebarProps) =
                         </Link>
                     ))}
             </div>
-            <div className={`overlay-backdrop ${sidebarExpanded ? 'is-open' : ''}`}></div>
+            <div className={`overlay-backdrop ${sidebarExpanded ? 'is-open' : ''}`} onClick={() => setSidebarExpanded(false)}></div>
         </div>
 
     )
