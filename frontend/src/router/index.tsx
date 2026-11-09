@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { CalendarDays, House, MapPin, ScrollText, UsersRound, Info } from "lucide-react";
+import { CalendarDays, House, MapPin, ScrollText, UsersRound, Info, DoorOpen} from "lucide-react";
 import { RootLayout } from "../layouts/RootLayout";
 import { HomePage } from "../pages/HomePage";
 import { NotFoundPage } from "../pages/NotFoundPage";
@@ -15,7 +15,7 @@ const childRoutes = [
     index: true,
     element: <HomePage />,
     handle: {
-      navigation: { title: "Wir", link: "/", icon: UsersRound },
+      navigation: { title: "Startseite", link: "/", icon: House },
     } satisfies RouteHandle,
   },
   {
@@ -29,7 +29,7 @@ const childRoutes = [
     path: "house",
     element: <HousePage />,
     handle: {
-      navigation: { title: "Haus", link: "/house", icon: House },
+      navigation: { title: "Haus", link: "/house", icon: DoorOpen },
     } satisfies RouteHandle,
   },
   {
