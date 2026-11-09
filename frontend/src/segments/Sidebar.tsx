@@ -34,7 +34,7 @@ export const Sidebar = ({ sidebarExpanded, setSidebarExpanded }: SidebarProps) =
                 {navigationItems
                     .filter(({ link }) => link !== "/")
                     .map(({ link, title, icon: Icon }) => (
-                        <Link className="sidebar-link" to={link} key={link}>
+                        <Link className="sidebar-link" to={link} key={link} onClick={() => setSidebarExpanded(false)}>
                             <Icon size={32} className="clr-1" />
                             {sidebarExpanded && <span className="sidebar-link-text">{title}</span>}
                         </Link>
