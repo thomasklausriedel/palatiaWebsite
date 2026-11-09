@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { CalendarDays, House, MapPin, ScrollText, UsersRound } from "lucide-react";
+import { CalendarDays, House, MapPin, ScrollText, UsersRound, Info } from "lucide-react";
 import { RootLayout } from "../layouts/RootLayout";
 import { HomePage } from "../pages/HomePage";
 import { NotFoundPage } from "../pages/NotFoundPage";
@@ -8,6 +8,7 @@ import { ArticlesPage } from "../pages/ArticlesPage";
 import { DirectionsPage } from "../pages/DirectionsPage";
 import type { RouteHandle } from "./navigation";
 import { ProgramPage } from "../pages/ProgramPage";
+import { ImpressumPage } from "../pages/ImpressumPage";
 
 const childRoutes = [
   {
@@ -45,6 +46,13 @@ const childRoutes = [
       navigation: { title: "Directions", link: "/directions", icon: MapPin },
     } satisfies RouteHandle,
   },
+  {
+    path: "impressum",
+    element: <ImpressumPage />,
+    handle: {
+      navigation: { title: "Impressum", link: "/impressum", icon: Info },
+    } satisfies RouteHandle,
+  }
 ];
 
 const navigationItems = childRoutes.flatMap((route) =>
