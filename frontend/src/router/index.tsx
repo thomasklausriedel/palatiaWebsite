@@ -43,7 +43,7 @@ const childRoutes = [
     path: "directions",
     element: <DirectionsPage />,
     handle: {
-      navigation: { title: "Directions", link: "/directions", icon: MapPin },
+      navigation: { title: "Anfahrt", link: "/directions", icon: MapPin },
     } satisfies RouteHandle,
   },
   {
