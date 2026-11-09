@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { House, MapPin, ScrollText, UsersRound } from "lucide-react";
+import { CalendarDays, House, MapPin, ScrollText, UsersRound } from "lucide-react";
 import { RootLayout } from "../layouts/RootLayout";
 import { HomePage } from "../pages/HomePage";
 import { NotFoundPage } from "../pages/NotFoundPage";
@@ -7,6 +7,7 @@ import { HousePage } from "../pages/HousePage";
 import { ArticlesPage } from "../pages/ArticlesPage";
 import { DirectionsPage } from "../pages/DirectionsPage";
 import type { RouteHandle } from "./navigation";
+import { ProgramPage } from "../pages/ProgramPage";
 
 const childRoutes = [
   {
@@ -14,6 +15,13 @@ const childRoutes = [
     element: <HomePage />,
     handle: {
       navigation: { title: "Wir", link: "/", icon: UsersRound },
+    } satisfies RouteHandle,
+  },
+  {
+    path: "program",
+    element: <ProgramPage />,
+    handle: {
+      navigation: { title: "Programm", link: "/program", icon: CalendarDays },
     } satisfies RouteHandle,
   },
   {
